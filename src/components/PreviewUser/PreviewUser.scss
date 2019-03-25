@@ -1,0 +1,57 @@
+.card {
+  width: calc(50% - 10px);
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+
+  &--video {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  &__element {
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__element--video {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  &__video {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__age {
+    margin-bottom: 20px;
+  }
+
+  &__phrase {
+    width: 60%;
+  }
+
+  &__video-element {
+    width: 100%;
+  }
+}
+
