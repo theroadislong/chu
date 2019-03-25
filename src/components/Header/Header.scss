@@ -1,0 +1,70 @@
+@import '../../index.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 740px) {
+    display: block;
+  }
+}
+
+.sort {
+  justify-content: space-between;
+  &__group {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+
+  &__types {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+    @media (max-width: 600px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 10px 50px;
+    text-align: center;
+    border-right: 1px solid black;
+    cursor: pointer;
+    @media (max-width: 600px) {
+      padding: 5px 10px;
+    }
+  }
+
+  &__label:last-of-type {
+    border-right: none;
+  }
+  
+  &__input:checked + &__label {
+    background-color: rgba(200,200,200, 0.5);
+  }
+
+  &__input:focus + &__label {
+    box-shadow: 0 0 0 1px lightskyblue;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+.sort--view {
+  display: flex;
+  flex-direction: column;
+}
